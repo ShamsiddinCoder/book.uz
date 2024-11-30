@@ -8,29 +8,29 @@ jobs:
     quality:
         runs-on: ubuntu-latest
         steps:
-            -name: Checkout
-             user: actions/checkout@v4
+          - name: Checkout
+            uses: actions/checkout@v4
 
-            -name: Setup Biome
-             user: biomejs/setup-biome@v2
-             with:
+          - name: Setup Biome
+            uses: biomejs/setup-biome@v2
+            with:
                 version: latest
 
-            -name: Run Biome
-             run: biome ci .
+          - name: Run Biome
+            run: biome ci .
 
     reviewdog:
         name: Biome Reviewdog
-        run-on: ubunto-latest
+        runs-on: ubunto-latest
         permissions:
             contents: read
             pull-requests: write
         steps:
-            -name: Checkout
-             user: actions/checkout@v4
+          - name: Checkout
+            uses: actions/checkout@v4
              
-            -name: Run Biome with Reviewdog
-             user: mongolyy/reviewdog-action-biome@v1
-             with:
+          - name: Run Biome with Reviewdog
+            uses: mongolyy/reviewdog-action-biome@v1
+            with:
                 github_token : ${{secrets.github_token}}
                 reporter: github-pr-review
