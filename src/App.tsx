@@ -1,11 +1,14 @@
-import { Button } from "./components/ui/button";
+import { Toaster } from "@/components/ui/sonner";
+import Flayer from "./components/flayer";
+import Navbar from "./components/navbar";
 
 function App() {
 	return (
 		<>
 			<div>
-				<h3> Hello </h3>
-				<Button>New Button</Button>
+				<Toaster />
+				<Navbar />
+				<Flayer />
 			</div>
 		</>
 	);
