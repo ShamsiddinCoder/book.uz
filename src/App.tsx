@@ -1,17 +1,10 @@
-import { Toaster } from "@/components/ui/sonner";
-import Flayer from "./components/flayer";
-import Navbar from "./components/navbar";
-
 function App() {
-	return (
-		<>
-			<div>
-				<Toaster />
-				<Navbar />
-				<Flayer />
-			</div>
-		</>
-	);
+
+  return (
+    <div>
+      <h3 className="text-[red] font-[600]">Hello</h3>
+    </div>
+  )
 }
 
-export default App;
+export default App
